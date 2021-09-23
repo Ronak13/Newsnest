@@ -33,7 +33,7 @@
 
 ## APK FILE
 
-<a href="https://drive.google.com/file/d/1LzSFH8NHGoUyQPQTkseoOc_c5XKKEKWZ/view?usp=sharing" download>
+<a href="https://drive.google.com/file/d/1Y65ffD-vhdLctEMPM8TZQOkrWbmzl8Lf/view?usp=sharing" download>
   <img src="art/download_btn.png" alt="download_btn" width="150" height="50">
 </a>
 

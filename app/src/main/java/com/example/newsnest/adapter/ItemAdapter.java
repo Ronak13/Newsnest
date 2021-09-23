@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -53,7 +54,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             }
         });
         if (newsList.getAuthor() == null) {
-            holder.mNewsAuthor.setText("NO Author found");
+            holder.mNewsAuthor.setText("No author found");
         } else {
             holder.mNewsAuthor.setText("Authors:- " + newsList.getAuthor());
 
@@ -68,7 +69,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         String t = l.toString();
         LocalDateTime ldt = LocalDateTime.parse(t, DateTimeFormatter.ISO_DATE_TIME);
         String IST = ldt.format(DateTimeFormatter.ofPattern("MMM dd,yyyy HH:mm:ss a"));
-        holder.mNewsPublished.setText("Published At:- " + IST);
+        holder.mNewsPublished.setText("Published at:- " + IST);
 
 
         // loading image
@@ -77,6 +78,16 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
                 .load(newsList.geturlToImage())
                 .placeholder(R.drawable.no_img)
                 .into(holder.imageView);
+
+        holder.appCompatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_TEXT, newsList.getUrl());
+                context.startActivity(Intent.createChooser(intent, "Share Article Via"));
+            }
+        });
 
     }
 
@@ -90,6 +101,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         private TextView mNewsHeading, mNewsDesc, mNewsAuthor, mNewsPublished;
         private CardView cardView;
         private ImageView imageView;
+        private AppCompatButton appCompatButton;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -99,6 +111,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             imageView = itemView.findViewById(R.id.newsimage_iv);
             mNewsPublished = itemView.findViewById(R.id.newspublished_tv);
             cardView = itemView.findViewById(R.id.cardview);
+            appCompatButton = itemView.findViewById(R.id.share_btn);
         }
     }
 }

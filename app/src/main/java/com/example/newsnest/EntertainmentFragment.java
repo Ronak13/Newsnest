@@ -25,7 +25,8 @@ public class EntertainmentFragment extends Fragment {
     static final String country = "IN";
     static final String category = "entertainment";
     // e02f16ac41d746e08206ec8d3f09f399
-    String key = "079dc017d2eb4dce8eeb06aa8f51d8cc";
+    // 079dc017d2eb4dce8eeb06aa8f51d8cc
+    String key = "e02f16ac41d746e08206ec8d3f09f399";
     ArrayList<ModelClass> modelClassArrayList;
     ItemAdapter itemAdapter;
     private RecyclerView recyclerView;

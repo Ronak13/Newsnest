@@ -27,15 +27,15 @@ public class PagerAdapter extends FragmentPagerAdapter {
             case 0:
                 return new HomeFragment();
             case 1:
-                return new SportsFragment();
-            case 2:
                 return new HealthFragment();
-            case 3:
+            case 2:
                 return new ScienceFragment();
+            case 3:
+                return new SportsFragment();
             case 4:
-                return new EntertainmentFragment();
-            case 5:
                 return new TechFragment();
+            case 5:
+                return new EntertainmentFragment();
             default:
                 return null;
         }

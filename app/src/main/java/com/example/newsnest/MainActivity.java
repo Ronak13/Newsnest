@@ -10,7 +10,13 @@ import com.example.newsnest.adapter.PagerAdapter;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class
+
+
+
+
+
+MainActivity extends AppCompatActivity {
 
     private TabLayout mTabLayout;
     private TabItem mHome, mSports, mHealth, mScience, mEntertainment, mTech;

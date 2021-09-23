@@ -23,7 +23,7 @@ import retrofit2.Response;
 public class HomeFragment extends Fragment {
 
     static final String country = "IN";
-    String key = "079dc017d2eb4dce8eeb06aa8f51d8cc";
+    String key = "e02f16ac41d746e08206ec8d3f09f399";
     ArrayList<ModelClass> modelClassArrayList;
     ItemAdapter itemAdapter;
     private RecyclerView recyclerView;
